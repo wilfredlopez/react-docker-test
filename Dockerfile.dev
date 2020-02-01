@@ -1,0 +1,24 @@
+
+# Package should be served at  http://192.168.99.100:3000/
+
+# Use an existing image as base
+FROM node:alpine
+
+# speficy a working directory
+WORKDIR /app
+
+# Copy package.json
+COPY package*.json .
+# Download and install a dependency
+RUN npm install
+# Copy all other directories
+COPY . .
+
+# Build project
+RUN npm run build
+
+
+# Tell the image what to do when it starts
+# as a container
+CMD ["npm","run","start"]
+
