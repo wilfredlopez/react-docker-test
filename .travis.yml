@@ -7,3 +7,8 @@ before_install:
 
 script:
   - docker run wilfredlopez/react-test npm run test -- --coverage --watchAll=false
+
+deploy:
+  provider: heroku
+  api_key: $HEROKU_KEY
+  app: test-react-docker-wilfred
