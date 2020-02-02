@@ -8,7 +8,7 @@ const App = () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Wilfred. React and Docker Compose</h1>
-        <p>COONNNN?</p>
+        <p>THIS IS THE FEAFURE BRANCH</p>
 
         <a
           className="App-link"
